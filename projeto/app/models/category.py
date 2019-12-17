@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils.text import slugify
 
 
@@ -6,8 +7,8 @@ class Category(models.Model):
     slug = models.SlugField('slug', max_length=254, null=False, unique=True, primary_key=True)
     name = models.CharField('Name', max_length=254, null=False)
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField('Created at', auto_now_add=True)
+    updated_at = models.DateTimeField('Updated at', auto_now=True)
 
     def save(self, *args, **kwargs):
         if len(self.slug) == 0:

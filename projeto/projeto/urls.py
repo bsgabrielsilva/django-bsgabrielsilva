@@ -19,6 +19,12 @@ from django.contrib import admin
 from django.urls import path, include, reverse_lazy
 from django.views.generic import RedirectView
 
+
+admin.site.site_header = 'Admin Algoritmus'
+admin.site.site_title = 'Admin Algoritmus'
+admin.site.index_title = 'Algoritmus administration'
+admin.empty_value_display = '**Empty**'
+
 urlpatterns = [
     path('', RedirectView.as_view(url=reverse_lazy('admin:index'))),
     path('admin/', admin.site.urls),

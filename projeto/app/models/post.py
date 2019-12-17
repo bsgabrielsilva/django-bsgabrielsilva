@@ -14,8 +14,8 @@ class Post(models.Model):
     categories = models.ManyToManyField('app.Category')
     user = models.ForeignKey('auth.User', on_delete=models.PROTECT)
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField('Created at', auto_now_add=True)
+    updated_at = models.DateTimeField('Updated at', auto_now=True)
 
     def save(self, *args, **kwargs):
         if len(self.slug) == 0:
