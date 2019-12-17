@@ -27,3 +27,4 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['title']
+        verbose_name_plural = "Posts"
