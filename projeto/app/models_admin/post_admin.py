@@ -10,9 +10,9 @@ class PostAdmin(admin.ModelAdmin):
     form = PostForm
 
     fieldsets = [
-        (None, {'fields': (tuple(['title', 'publish']),), }),
-        (None, {'fields': ['content']}),
-        (None, {'fields': ['categories']})
+        ("Título e publicação", {'fields': (tuple(['title', 'publish']),), }),
+        ("Conteúdo", {'fields': ['content']}),
+        ("Categorias", {'fields': ['categories']})
     ]
 
     def save_model(self, request, obj, form, change):
