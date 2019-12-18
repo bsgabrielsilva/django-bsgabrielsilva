@@ -11,8 +11,8 @@ class Post(models.Model):
     content = RichTextUploadingField('Content', null=False)
     publish = models.BooleanField('Publish?', null=False, default=False)
 
-    categories = models.ManyToManyField('app.Category')
-    user = models.ForeignKey('auth.User', on_delete=models.PROTECT)
+    categories = models.ManyToManyField('app.Category', related_name='posts')
+    user = models.ForeignKey('auth.User', on_delete=models.PROTECT, related_name='posts')
 
     created_at = models.DateTimeField('Created at', auto_now_add=True)
     updated_at = models.DateTimeField('Updated at', auto_now=True)

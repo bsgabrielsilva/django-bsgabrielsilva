@@ -148,3 +148,8 @@ CKEDITOR_CONFIGS = {
 CKEDITOR_ALLOW_NONIMAGE_FILES = False
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
+}
