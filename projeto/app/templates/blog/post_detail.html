@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+
+{% block titulo %}
+{{ post.title }}
+{% endblock titulo %}
+
+{% block conteudo %}
+
+<div class="card">
+    <div class="card-body">
+        <h4><strong>{{ post.title }}</strong></h4>
+        <p style="font-size: 8pt;" class="text-muted">
+            <strong>criado em</strong> {{ post.created_at|date:'d/m/Y H:i:s' }}
+            <strong>atualizado em</strong> {{ post.updated_at|date:'d/m/Y H:i:s' }}
+            <strong>autor: </strong>{{ post.user.username }} <br>
+            <strong>categorias: </strong> {% for c in post.categories.all %} {{ c.name }},  {% endfor %}
+        </p>
+        {{ post.content|safe }}
+    </div>
+</div>
+<br>
+
+{% endblock conteudo %}

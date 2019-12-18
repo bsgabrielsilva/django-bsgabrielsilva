@@ -1,0 +1,56 @@
+html, body {margin: 0;padding: 0;height: 100% !important; overflow-x: hidden;
+}
+#app{min-height: 100% !important;position: relative; background: #ecedf1;}
+div.body-content {position: relative; padding-bottom: 200px !important;}
+.navbar-django {
+  background-color: #002f70;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+#rodape1 { bottom: 0;position: absolute;text-align: center;width: 100%;height: auto;line-height: 1.15;background: #002f70;padding: 30px 0;}
+#rodape1 p { font-family: Arial, sans;  color: white;}
+#rodape1 p a { text-decoration: none; color: white;}
+
+#rodape2 { bottom: 0;position:relative;text-align: center;width: 100%;height: auto;line-height: 1.15;background: #002f70;padding: 30px 0;}
+#rodape2 p { font-family: Arial, sans;  color: white;}
+#rodape2 p a { text-decoration: none; color: white;}
+
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  background: #4388CC !important;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px) !important;
+    overflow-y: auto !important;
+}

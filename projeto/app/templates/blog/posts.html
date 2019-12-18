@@ -1,0 +1,55 @@
+{% extends './base.html' %}
+
+{% block titulo %}
+Postagens
+{% endblock titulo %}
+
+{% block conteudo %}
+
+<div class="card">
+    <div class="card-header navbar-django text-white text-center">
+        <div class="float-left">
+            <strong>Postagens</strong>
+        </div>
+        <div class="float-right">
+            <form method="get">
+                <div class="row">
+                    <div class="col-9">
+                        <input type="text" class="form-control" name="busca" id="busca" placeholder="Buscar post">
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" class="btn btn-default" value="Buscar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+        {% for p in posts %}
+        <div class="col-sm-4 col-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4><strong>{{ p.title }}</strong></h4>
+                    <p style="font-size: 8pt;" class="text-muted">
+                        <strong>criado em</strong> {{ p.created_at|date:'d/m/Y H:i:s' }}<br>
+                        <strong>atualizado em</strong> {{ p.updated_at|date:'d/m/Y H:i:s' }} <br>
+                        <strong>autor: </strong>{{ p.user.username }}
+                    </p>
+                    <a href="{% url 'post_detail' pk=p.pk %}" class="btn btn-primary">Visualizar</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        {% empty %}
+            <h3><strong>Sem postagens encontradas!</strong></h3>
+        {% endfor %}
+        </div>
+        {% with posts as paginated %}
+            {% include "./pagination.html" %}
+        {% endwith %}
+    </div>
+</div>
+<br>
+
+{% endblock conteudo %}
