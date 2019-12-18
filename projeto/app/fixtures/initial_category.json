@@ -1,0 +1,110 @@
+[
+  {
+    "model": "app.category",
+    "pk": "esportes",
+    "fields": {
+      "name": "Esportes",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "educacao",
+    "fields": {
+      "name": "Educação",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "cultura",
+    "fields": {
+      "name": "Cultura",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "mundo",
+    "fields": {
+      "name": "Mundo",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "politica",
+    "fields": {
+      "name": "Politica",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "noticias",
+    "fields": {
+      "name": "Notícias",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "nacional",
+    "fields": {
+      "name": "Nacional",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "defesa",
+    "fields": {
+      "name": "Defesa",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "policia",
+    "fields": {
+      "name": "Policia",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "social",
+    "fields": {
+      "name": "Social",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "cinema",
+    "fields": {
+      "name": "Cinema",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  },
+  {
+    "model": "app.category",
+    "pk": "adulto",
+    "fields": {
+      "name": "Adulto",
+      "created_at": "2019-12-17 10:04",
+      "updated_at": "2018-12-17 10:04"
+    }
+  }
+]
